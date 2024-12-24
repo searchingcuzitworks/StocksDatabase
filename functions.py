@@ -11,7 +11,6 @@ def nse_stocks():
     response = urlopen(url, cafile=certifi.where())
     data = response.read().decode("utf-8")
     data = json.loads(data)
-    print(data)
     df = pd.DataFrame(data)
     df = df.drop(columns = ["earningsAnnouncement", "timestamp"])
     return df

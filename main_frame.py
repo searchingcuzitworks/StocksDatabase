@@ -6,7 +6,7 @@ import functions
 class App:
     def __init__(self):
         self.left_column, self.middle_column, self.right_column = st.columns(3)
-    #@st.cache_data
+    @st.cache_data
     def nse_stocks(self):
         st.dataframe(functions.nse_stocks())
 
